@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp40">
+
+        <atirek.pothiwala.utility.views.SquareImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp60"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_light_corner_10dp"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp15"
+                android:text="@string/countryCode"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/sp15" />
+
+            <View
+                android:layout_width="@dimen/dp10"
+                android:layout_height="0dp" />
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_light_corner_10dp"
+                android:hint="@string/enterMobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="@dimen/dp15"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGray"
+                android:textCursorDrawable="@drawable/line_cursor"
+                android:textSize="@dimen/sp15" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/rect_black_corner_10dp"
+            android:text="@string/submit"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp10"
+            android:gravity="center"
+            android:text="@string/enterOtp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sp15" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinViewOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp30"
+            android:inputType="number"
+            android:itemBackground="@color/colorPrimaryLight"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold"
+            app:cursorColor="@color/colorBlack"
+            app:hideLineWhenFilled="false"
+            app:itemCount="4"
+            app:itemHeight="@dimen/dp60"
+            app:itemRadius="@dimen/dp10"
+            app:itemSpacing="@dimen/dp10"
+            app:itemWidth="@dimen/dp60"
+            app:lineColor="@android:color/transparent"
+            app:lineWidth="@dimen/dp1"
+            app:viewType="rectangle" />
+
+    </LinearLayout>
+
+</layout>
